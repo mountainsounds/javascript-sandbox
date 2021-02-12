@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --primaryColor: #f9ed69;
+    --secondaryColor:#f08a5d;
+    --thirdColor: #b83b5e;
+    --fourthColor: #6a2c70;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+}
+
+.zone {
+    color:#FFF;
+    font-size: 2em;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+/***********************************************************************
+ *  Nav Bar
+ **********************************************************************/
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-size: 1em;
+    background-color: var(--fourthColor);
+}
+
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        font-size: 0.5em;
+        padding: 0;
+    }
+}
+
+.push {
+    margin-right: auto;
+}
+
+li {
+    padding: 20px;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav i {
+    font-size: 1em;
+}
+
+nav i:hover {
+    transform: scale(1.3);
+    filter: brightness(1.2);
+}
+
+#brandLink:hover span{
+    display: none;
+}
+
+#brandLink:hover:before {
+    content: "Return to main page";
+    font-size: .9em;
+    color: black;
+}
+    
+
+/***********************************************************************
+ *  Cover
+ **********************************************************************/
+.container {
+    /*show heigh: auto*/
+    height: 50vh; 
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-image: url(imgs/forrestCover.jpg);
+    background-size: cover;
+}
+
+/***********************************************************************
+ *  Grid Panel
+ **********************************************************************/
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+    background-color: var(--secondaryColor);
+}
+
+.box {
+    background-color: var(--thirdColor);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 4px;
+    border:1px solid black;
+    width: 250px;
+    justify-self: center;
+    color: black;
+    font-size: .5em;
+    height: 275px;
+}
+
+.box img {
+    background-size: cover;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+}
+
+.box article h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.box article p {
+    margin: 5px auto;
+}
+
+
+
+
+/***********************************************************************
+ *  Footer
+ **********************************************************************/
+footer {
+    text-align: center;
+    background-color: var(--fourthColor);
+}
+
